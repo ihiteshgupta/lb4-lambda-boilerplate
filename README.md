@@ -1,2 +1,3 @@
-# lb4-lambda-boilerplate
-To run Loopback v4 Application in AWS lambda with no fuss.
+# lb-4-lambda-boilerplate
+
+[![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)

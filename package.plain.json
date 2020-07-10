@@ -1,0 +1,75 @@
+{
+  "name": "lb-4-lambda-boilerplate",
+  "version": "1.0.0",
+  "description": "lb4 lambda boilerplate",
+  "keywords": [
+    "loopback-application",
+    "loopback"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "lint": "npm run prettier:check && npm run eslint",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "eslint": "eslint .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "pretest": "npm run clean && npm run build",
+    "test": "mocha dist/__tests__",
+    "posttest": "npm run lint",
+    "test:dev": "mocha dist/__tests__/**/*.js && npm run posttest",
+      "docker:build": "docker build -t lb-4-lambda-boilerplate .",
+    "docker:run": "docker run -p 3000:3000 -d lb-4-lambda-boilerplate",
+      "migrate": "node ./dist/migrate",
+    "start": "npm run build && node -r source-map-support/register .",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "",
+  "files": [
+    "README.md",
+    "index.js",
+    "index.d.ts",
+    "dist",
+    "src",
+    "!*/__tests__"
+  ],
+  "dependencies": {
+    "@loopback/boot": "^2.0.0",
+    "@loopback/context": "^3.0.0",
+    "@loopback/core": "^2.0.0",
+    "@loopback/openapi-v3": "^3.0.0",
+    "@loopback/repository": "^2.0.0",
+    "@loopback/rest": "^3.0.0",
+    "@loopback/rest-explorer": "^2.0.0",
+  "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.16",
+    "@loopback/testlab": "^2.0.0",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^10.17.17",
+    "mocha": "^7.1.0",
+    "prettier": "^1.19.1",
+    "source-map-support": "^0.5.16",
+    "@typescript-eslint/parser": "^2.22.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@loopback/eslint-config": "^6.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-eslint-plugin": "^2.2.1",
+    "eslint-plugin-mocha": "^6.3.0",
+      "typescript": "~3.8.3"
+  }
+}
