@@ -56,7 +56,7 @@
     "@loopback/rest-explorer": "^2.0.0",
     "@loopback/service-proxy": "^2.0.0",
     "aws-serverless-express": "^3.3.8",
-    "serverless": "^1.74.1",
+    "serverless": "^3.25.1",
     "serverless-offline": "^6.4.0",
     "tslib": "^1.10.0"
   },
